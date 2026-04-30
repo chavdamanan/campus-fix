@@ -22,7 +22,8 @@ const IssueSchema = new mongoose.Schema({
   resolvedAt: { type: Date },
   proofImageUrl: { type: String },
   history: [{ type: Object }],
-  userNotified: { type: Boolean, default: false } // Track if user has seen resolution
+  userNotified: { type: Boolean, default: false }, // Track if user has seen resolution
+  feedbackSubmitted: { type: Boolean, default: false } // Track if feedback has been given for this resolved issue
 });
 
 module.exports = mongoose.model('Issue', IssueSchema);
